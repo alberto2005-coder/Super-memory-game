@@ -1,0 +1,16 @@
+[
+    {
+        "timestamp": "2025-10-06 18:23:13",
+        "name": "JAVI",
+        "score": 60,
+        "level": 4,
+        "difficulty": "EASY"
+    },
+    {
+        "timestamp": "2025-10-06 18:22:05",
+        "name": "ALBERTO",
+        "score": 10,
+        "level": 2,
+        "difficulty": "NORMAL"
+    }
+]
