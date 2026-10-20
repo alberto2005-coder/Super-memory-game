@@ -71,3 +71,85 @@ pip install pygame
 ```bash
 python super_memory_numbers.py
 ```
+
+
+
+
+---
+
+# English Version
+
+🧠 **Super Memory Numbers Game**
+
+**Super Memory Numbers Game** is a challenging memory and reaction game developed with **Pygame**. Your goal is to remember the sequence of positions where the numbers from 1 up to the current level appear, and then click those positions in the correct order to advance.
+
+---
+
+## 🎮 Key Features
+
+* **Memory Sequence:** Buttons from 1 to $N$ light up briefly in sequence. You must remember the position of each number in the correct order.
+* **Progressive Difficulty:** Board complexity and display speed increase with the level.
+* **Multiple Difficulties:** Play in **Easy**, **Normal** or **Hard** modes, each with adjusted display times and response time limits.
+* **Star Mode (\*):** At higher levels, a number may be replaced by a $\star$. This means you must click that position even if it does not match the number expected at that moment.
+* **Lives and Time System:** You have a limited number of lives and a time limit to respond at each step, which adds tension.
+* **Hall of Fame:** Best scores are stored locally (`scores.json`), ranked by difficulty level for fair competition.
+
+---
+
+## 🚀 How to Play
+
+### 1. Starting a Game
+
+1.  On startup you will be taken to the **SELECT DIFFICULTY** screen.
+2.  Choose your game mode by clicking **EASY**, **NORMAL** or **HARD**.
+
+### 2. Round Phases
+
+1.  **Display Phase (MEMORIZE):**
+    * The numbers from 1 up to the current level appear briefly at random positions on the board.
+    * **Focus!** Remember the position of each number.
+2.  **Input Phase (ANSWER):**
+    * The game will ask you which position of the number to click next (e.g.: "Click the position of: 1").
+    * **Click** the correct button on the board.
+
+### 3. Results and Progress
+
+* **Correct:** You move to the next number in the sequence and the timer refills. If you complete the whole sequence you level up and earn points.
+* **Wrong or Time Up:** You lose a life. If you still have lives, the sequence for the current level restarts.
+
+### 4. Game Over
+
+* If you lose all lives, the game ends.
+* You will be asked to enter your name to register your final score in the **Hall of Fame**.
+
+---
+
+## 🏆 Hall of Fame
+
+* You can access the scores from the main menu.
+* **Navigation:** Use the **arrow keys $\leftarrow$ and $\rightarrow$** or **click the on-screen navigation buttons** to switch between the difficulty tables (**EASY**, **NORMAL**, **HARD**).
+
+---
+
+## 💻 Requirements and Execution (Desktop)
+
+To run this game you need **Python 3** and the **Pygame** library installed.
+
+### 1. Requirements
+
+Make sure you have **Python 3.x** installed on your system.
+
+### 2. Installing Pygame
+
+Open your terminal or command prompt and run:
+
+```bash
+pip install pygame
+```
+
+## 🚀 How to Run
+
+```bash
+python super_memory_numbers.py
+```
+
