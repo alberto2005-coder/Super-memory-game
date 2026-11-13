@@ -1,155 +1,159 @@
-# 🧠 Super Memory Numbers Game
+# Super Memory Numbers Game
 
-**Super Memory Numbers Game** es un desafiante juego de memoria y reacción desarrollado con **Pygame**. Tu objetivo es recordar la secuencia de posiciones en las que aparecen los números del 1 hasta el nivel actual y luego hacer clic en esas posiciones en el orden correcto para avanzar.
+[![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Pygame](https://img.shields.io/badge/Pygame-2.x-00A300)](https://www.pygame.org/)
+[![MIT](https://img.shields.io/badge/Licencia-MIT-green)](LICENSE)
 
----
-
-## 🎮 Características Principales
-
-* **Secuencia de Memoria:** Los botones del 1 al $N$ se iluminan brevemente en secuencia. Debes recordar la posición de cada número en el orden correcto.
-* **Dificultad Progresiva:** La complejidad del tablero y la velocidad de visualización aumentan con el nivel.
-* **Múltiples Dificultades:** Juega en modos **Fácil**, **Normal** o **Difícil**, cada uno con tiempos de visualización y límites de tiempo de respuesta ajustados.
-* **Modo Estrella (\*):** En niveles superiores, un número podría ser reemplazado por un $\star$. Esto indica que debes hacer clic en esa posición, aunque no corresponda al número esperado en ese momento.
-* **Sistema de Vidas y Tiempo:** Tienes un número limitado de vidas y un tiempo límite para responder en cada paso, lo que añade tensión.
-* **Hall de la Fama:** Las mejores puntuaciones se guardan localmente (`scores.json`), clasificadas por el nivel de dificultad para una competencia justa.
+[Español](#español) · [English](#english)
 
 ---
 
-## 🚀 Cómo Jugar
+## Español
 
-### 1. Iniciar Partida
+### Índice
 
-1.  Al iniciar, serás dirigido a la pantalla **SELECCIONA DIFICULTAD**.
-2.  Elige tu modo de juego haciendo clic en **FÁCIL**, **NORMAL** o **DIFÍCIL**.
+- [Descripción](#descripción)
+- [Cómo se juega](#cómo-se-juega)
+- [Características](#características)
+- [Hall de la Fama](#hall-de-la-fama)
+- [Requisitos](#requisitos)
+- [Instalación y ejecución](#instalación-y-ejecución)
+- [Estructura del proyecto](#estructura-del-proyecto)
+- [Licencia](#licencia)
 
-### 2. Fases de la Ronda
+### Descripción
 
-1.  **Fase de Visualización (MEMORIZA):**
-    * Los números del 1 hasta el nivel actual aparecen brevemente en posiciones aleatorias del tablero.
-    * **¡Concentrate!** Recuerda la posición de cada número.
-2.  **Fase de Entrada (RESPONDE):**
-    * El juego te pedirá qué posición del número debes marcar a continuación (ej: "Marca la posición del: 1").
-    * **Haz clic** en el botón correcto en el tablero.
+**Super Memory Numbers Game** es un juego de memoria y reflejos hecho con **Pygame**. En cada ronda aparecen los números del 1 hasta el nivel actual en posiciones aleatorias del tablero; después hay que hacer clic en esas posiciones en el orden correcto para avanzar.
 
-### 3. Resultados y Avance
+### Cómo se juega
 
-* **Acierto:** Avanzas al siguiente número de la secuencia y el tiempo se recarga. Si completas toda la secuencia, subes de nivel y ganas puntos.
-* **Fallo o Tiempo Agotado:** Pierdes una vida. Si aún te quedan vidas, la secuencia para el nivel actual se reinicia.
+1. Elige dificultad en la pantalla inicial: **Fácil**, **Normal** o **Difícil**.
+2. **Memoriza**: los números se iluminan brevemente en el tablero.
+3. **Responde**: el juego pide una posición concreta («Marca la posición del 1») y tienes un tiempo límite.
+4. Si aciertas, avanzas y el cronómetro se recarga; al completar la secuencia subes de nivel.
+5. Si fallas o se agota el tiempo, pierdes una vida y la secuencia del nivel se reinicia.
+6. Sin vidas, la partida termina y puedes guardar tu nombre en el Hall de la Fama.
 
-### 4. Fin del Juego
+### Características
 
-* Si pierdes todas las vidas, la partida termina.
-* Se te pedirá introducir tu nombre para registrar tu puntuación final en el **Hall de la Fama**.
+- **Secuencia de memoria** del 1 al nivel actual.
+- **Dificultad progresiva**: más números, más rápido y menos tiempo de reacción.
+- **Tres modos**: Fácil, Normal y Difícil, con tiempos y límites distintos.
+- **Modo estrella**: en niveles altos un número puede sustituirse por `*`, y hay que pulsar esa posición aunque no toque el número esperado.
+- **Vidas y temporizador** por paso.
+- **Hall de la Fama** local en `scores.json`, separado por dificultad.
 
----
+### Hall de la Fama
 
-## 🏆 Hall de la Fama
+Se abre desde el menú principal. Cambia de tabla con las **flechas ← y →** o con los botones en pantalla. Cada dificultad tiene su propia clasificación para que la comparación sea justa.
 
-* Puedes acceder a las puntuaciones desde el menú principal.
-* **Navegación:** Usa las **teclas de flecha $\leftarrow$ y $\rightarrow$** o **haz clic en los botones de navegación** en pantalla para cambiar entre las tablas de dificultad (**FÁCIL**, **NORMAL**, **DIFÍCIL**).
+### Requisitos
 
----
-
-## 💻 Requisitos y Ejecución (Escritorio)
-
-Para ejecutar este juego, necesitas tener instalado **Python 3** y la biblioteca **Pygame**.
-
-### 1. Requisitos
-
-Asegúrate de tener **Python 3.x** instalado en tu sistema.
-
-### 2. Instalación de Pygame
-
-Abre tu terminal o símbolo del sistema y ejecuta el siguiente comando:
+- **Python 3.x**.
+- **Pygame**:
 
 ```bash
 pip install pygame
 ```
 
-## 🚀 Cómo ejecutar
+### Instalación y ejecución
 
 ```bash
-python super_memory_numbers.py
+git clone https://github.com/alberto2005-coder/Super-memory-game.git
+cd Super-memory-game
+pip install pygame
+python super_memory_numbers_game.py
 ```
 
+> [!NOTE]
+> El archivo de puntuaciones (`scores.json`) se crea o actualiza en la carpeta del proyecto. Si lo borras, empiezas con el Hall de la Fama vacío.
 
+### Estructura del proyecto
 
+```text
+Super-memory-game/
+├── super_memory_numbers_game.py  # Juego completo: menús, lógica y puntuaciones
+├── scores.json                   # Hall de la Fama local
+├── LICENSE
+└── README.md
+```
 
----
+### Licencia
 
-# English Version
-
-🧠 **Super Memory Numbers Game**
-
-**Super Memory Numbers Game** is a challenging memory and reaction game developed with **Pygame**. Your goal is to remember the sequence of positions where the numbers from 1 up to the current level appear, and then click those positions in the correct order to advance.
-
----
-
-## 🎮 Key Features
-
-* **Memory Sequence:** Buttons from 1 to $N$ light up briefly in sequence. You must remember the position of each number in the correct order.
-* **Progressive Difficulty:** Board complexity and display speed increase with the level.
-* **Multiple Difficulties:** Play in **Easy**, **Normal** or **Hard** modes, each with adjusted display times and response time limits.
-* **Star Mode (\*):** At higher levels, a number may be replaced by a $\star$. This means you must click that position even if it does not match the number expected at that moment.
-* **Lives and Time System:** You have a limited number of lives and a time limit to respond at each step, which adds tension.
-* **Hall of Fame:** Best scores are stored locally (`scores.json`), ranked by difficulty level for fair competition.
+**MIT** — consulta [LICENSE](LICENSE).
 
 ---
 
-## 🚀 How to Play
+## English
 
-### 1. Starting a Game
+### Table of contents
 
-1.  On startup you will be taken to the **SELECT DIFFICULTY** screen.
-2.  Choose your game mode by clicking **EASY**, **NORMAL** or **HARD**.
+- [Overview](#overview)
+- [How to play](#how-to-play)
+- [Features](#features)
+- [Hall of Fame](#hall-of-fame)
+- [Requirements](#requirements)
+- [Installation and running](#installation-and-running)
+- [Project structure](#project-structure)
+- [License](#license)
 
-### 2. Round Phases
+### Overview
 
-1.  **Display Phase (MEMORIZE):**
-    * The numbers from 1 up to the current level appear briefly at random positions on the board.
-    * **Focus!** Remember the position of each number.
-2.  **Input Phase (ANSWER):**
-    * The game will ask you which position of the number to click next (e.g.: "Click the position of: 1").
-    * **Click** the correct button on the board.
+**Super Memory Numbers Game** is a memory and reaction game built with **Pygame**. Each round shows the numbers from 1 up to the current level at random board positions; you then click those positions in the right order to advance.
 
-### 3. Results and Progress
+### How to play
 
-* **Correct:** You move to the next number in the sequence and the timer refills. If you complete the whole sequence you level up and earn points.
-* **Wrong or Time Up:** You lose a life. If you still have lives, the sequence for the current level restarts.
+1. Pick a difficulty on the start screen: **Easy**, **Normal** or **Hard**.
+2. **Memorize**: the numbers light up briefly on the board.
+3. **Answer**: the game asks for a specific position ("Click the position of 1") under a time limit.
+4. A correct answer advances the sequence and refills the timer; finishing it levels you up.
+5. A wrong answer or a timeout costs a life and restarts the current level's sequence.
+6. With no lives left the run ends and you can record your name in the Hall of Fame.
 
-### 4. Game Over
+### Features
 
-* If you lose all lives, the game ends.
-* You will be asked to enter your name to register your final score in the **Hall of Fame**.
+- **Memory sequence** from 1 to the current level.
+- **Progressive difficulty**: more numbers, faster display and less reaction time.
+- **Three modes**: Easy, Normal and Hard, each with its own timings.
+- **Star mode**: at higher levels a number may become `*`, and you must click that position even if it is not the expected number.
+- **Lives and per-step timer**.
+- **Local Hall of Fame** in `scores.json`, split by difficulty.
 
----
+### Hall of Fame
 
-## 🏆 Hall of Fame
+Open it from the main menu. Switch tables with the **← and → arrow keys** or the on-screen buttons. Each difficulty keeps its own ranking so comparisons stay fair.
 
-* You can access the scores from the main menu.
-* **Navigation:** Use the **arrow keys $\leftarrow$ and $\rightarrow$** or **click the on-screen navigation buttons** to switch between the difficulty tables (**EASY**, **NORMAL**, **HARD**).
+### Requirements
 
----
-
-## 💻 Requirements and Execution (Desktop)
-
-To run this game you need **Python 3** and the **Pygame** library installed.
-
-### 1. Requirements
-
-Make sure you have **Python 3.x** installed on your system.
-
-### 2. Installing Pygame
-
-Open your terminal or command prompt and run:
+- **Python 3.x**.
+- **Pygame**:
 
 ```bash
 pip install pygame
 ```
 
-## 🚀 How to Run
+### Installation and running
 
 ```bash
-python super_memory_numbers.py
+git clone https://github.com/alberto2005-coder/Super-memory-game.git
+cd Super-memory-game
+pip install pygame
+python super_memory_numbers_game.py
 ```
 
+> [!NOTE]
+> The score file (`scores.json`) is created or updated inside the project folder. Delete it to start with an empty Hall of Fame.
+
+### Project structure
+
+```text
+Super-memory-game/
+├── super_memory_numbers_game.py  # Full game: menus, logic and scores
+├── scores.json                   # Local Hall of Fame
+├── LICENSE
+└── README.md
+```
+
+### License
+
+**MIT** — see [LICENSE](LICENSE).
